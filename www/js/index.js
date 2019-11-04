@@ -53,7 +53,7 @@ var app = {
 function currencyConvert(){
     var http = new XMLHttpRequest();
     const url = 'http://www.apilayer.net/api/live?access_key=2bd7991fcb1e37c5073e35fee8264bef&format=1';
-    http.open("GET", url);
+    http.open("GET", url);235
     http.send();
     
     http.onreadystatechange = (e) => {
@@ -62,10 +62,10 @@ function currencyConvert(){
         console.log(response);
         console.log(responseJSON);
 
-        //var dollar = document.getElementById('myTable').dollarRow.dollar;
-        //var euro = responseJSON.quotes.USDEUR;
+        //var dollar = document.getElementById('dollar');
+        var euro = responseJSON.quotes.USDEUR;
         //var currency = dollar * euro;
-        document.getElementById('pos').innerHTML = currency;
+        document.getElementById('posEuro').innerHTML = euro;
         
     }
 }
