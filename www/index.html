@@ -77,11 +77,11 @@
 
                 US Dollar: <input id="dollar" type="text" name="dollar">
                 <button id="buttonConvert" onclick="currencyConvert()"> Convert </button> <br>
-                <div id="pos"> </div> <br>
+                <div id="posEuro"> </div> <br>
 
                 EURO: <input id="euro" type="text" name="euro">
                 <button id="buttonConvert" onclick="currencyConvert()"> Convert </button> <br>
-                <div id="pos"> </div> <br>
+                <div id="posDollar"> </div> <br>
                 
 
                 <div>
@@ -96,12 +96,14 @@
     <script type="text/javascript">
         app.initialize();
     </script>
-    <!-- <script>
+    <script>
         function dollarToEuro(){
-            var dollar = document.getElementById('dollar');
-            var
+            var euro = document.getElementById('posEuro').innerHTML;
+            var dollar = document.getElementById('dollar').innerHTML;
+            var result = euro * dollar;
+            document.getElementById('posEuro').innerHTML;
         }
-    </script> -->
+    </script>
 </body>
 
 </html>
